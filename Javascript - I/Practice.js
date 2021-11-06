@@ -1,4 +1,9 @@
+                                                /* Number */
 console.clear();
-var n=5;
-console.log(n)
-console.log(0/0)
+var a=5
+var b="5"
+var numFloat=87.987653
+console.log("To String: "+a.toString())
+console.log(parseInt(b))
+console.log(numFloat.toFixed())
+console.log(numFloat.toFixed(2))
