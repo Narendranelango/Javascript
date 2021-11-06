@@ -1,25 +1,27 @@
-                                                /* Strings */
-console.clear();
-var str1="I love \"Java Script\" "
-var str2='I love \'Java Script\' '
-console.log(str1)
-console.log(str2)
+                                        /*Conditional and Switch Statements*/
+//Conditional                                        
+if(5>7)
+{
+    console.log("1")
+}
+else if(8>3)
+{
+    console.log("2")
+}
 
-                                                /*In Built String Function's */
-var naren="Hi Narendran!"
-console.log(naren.length)
-console.log(naren.slice(1,7))
-console.log(naren.substr(4,5))
-console.log(naren.toUpperCase())
-console.log(naren.toLowerCase())
-var narendran="Hi, How, Are, you"
-var na="      Na"
-console.log(na.trim())
-console.log(narendran.split(','))
-console.log(narendran.charAt(1))
+else{
+    console.log("3")
+}
 
-                                                /*Null and Undefined */
-var aa;
-console.log(aa);
-var aa=null
-console.log(aa)                            
+//Switch
+var per=80
+switch(per){
+case 40:
+    console.log("Fail")
+    break;
+case 80:
+    console.log("Pass") 
+    break;
+default:
+    console.log("Please enter the correct value")
+}
