@@ -17,3 +17,9 @@ var na="      Na"
 console.log(na.trim())
 console.log(narendran.split(','))
 console.log(narendran.charAt(1))
+
+                                                /*Null and Undefined */
+var aa;
+console.log(aa);
+var aa=null
+console.log(aa)                            
