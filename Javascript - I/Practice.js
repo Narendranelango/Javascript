@@ -1,9 +1,6 @@
-                                                /* Number */
+                                                /* Strings */
 console.clear();
-var a=5
-var b="5"
-var numFloat=87.987653
-console.log("To String: "+a.toString())
-console.log(parseInt(b))
-console.log(numFloat.toFixed())
-console.log(numFloat.toFixed(2))
+var str1="I love \"Java Script\" "
+var str2='I love \'Java Script\' '
+console.log(str1)
+console.log(str2)
