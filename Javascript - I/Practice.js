@@ -25,3 +25,20 @@ case 80:
 default:
     console.log("Please enter the correct value")
 }
+
+
+                                /*Operators */
+
+if(4 =='4'){
+    console.log(true)
+}
+else{
+    console.log(false)
+}
+
+if(4 === '4'){
+    console.log(true)
+}
+else{
+    console.log(false)
+}
