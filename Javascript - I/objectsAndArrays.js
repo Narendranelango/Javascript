@@ -1,3 +1,4 @@
+//Objects
 console.clear()
 var car={
     brand:"Volkswagen",
@@ -29,7 +30,6 @@ var bike={
 console.log("Brand: "+car.brand+" Model:"+car.model)
 console.log(car.owner)
 console.log(bike.fun())
-
 
 //Arrays-I
 var mFriends=["Viki","Manish","Pranav","Aakash"]
