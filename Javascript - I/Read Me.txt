@@ -1,0 +1,1 @@
+This folder contains Javascript code files which I am practising before I embark my React Journey in Udemy.
