@@ -23,3 +23,22 @@ var stu_Det = {
     }
 }
 stu_Det.getEdu()
+
+//Constructor
+var emp={
+    empName : "Narendran Elango",
+    empID : "11314064",
+    Designation : "Senior Software Engineer",
+    Role : "Software Developer" 
+}
+    function Employee(name,eid,des,role){
+        this.empName=name
+        this.empID=eid
+        this.Designation=des
+        this.Role=role
+    }
+
+    var naren=new Employee("Naren","12","SSE","AD")
+    var viki=new Employee("viki","13","SSE","AD")
+    console.log(naren)
+    console.log(viki)
