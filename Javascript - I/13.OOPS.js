@@ -42,3 +42,32 @@ var emp={
     var viki=new Employee("viki","13","SSE","AD")
     console.log(naren)
     console.log(viki)
+
+            /*Prototype */
+
+var restaurant = {//Should meke sure that this "restaurant" is in lowercase. Or else this will get confused with the "Restaurant" Constructor.
+    name : "SS Hyderabad",
+    place : "Chennai",
+    food_Catagories : "Veg/Non-Veg",
+    offer : "Unlimited for first day"
+}
+
+function Restaurant(Rname, Rplace, Rfood_Catagories, RNoOfPersons){
+    this.name=Rname;
+    this.place=Rplace;
+    this.food_Catagories= Rfood_Catagories;
+    this.noOfPerson = RNoOfPersons
+}
+
+Restaurant.prototype.calculatePrice = function() {
+    if(this.food_Catagories === "Veg"){
+      console.log("Total Amount : "+550 *this.noOfPerson)
+        }
+    else if(this.food_Catagories === "Non-Veg"){
+        console.log("Total Amount : "+950 *this.noOfPerson)
+        }
+    }
+
+var restaurant =new Restaurant("Arabian Nights", "Chennai", "Veg",2)
+console.log(restaurant)
+restaurant.calculatePrice()
