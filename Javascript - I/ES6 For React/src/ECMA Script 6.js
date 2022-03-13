@@ -12,12 +12,21 @@ var name2;  //post initialization can only be done in var and not in let and con
 
 
 const func=()=>{
-    return `${name} ${name2}`  //The dollar represents the template styring
+    return `${name} ${name2}`  //The dollar represents the template string
 }
 const res='Hello '+func(name,name2)
 // const res1='Hello ${func(name,name2)}`;  //Used for the function func(){ return() }
 console.log(res)
 
+
+                         /* Template Literals*/
+
+// Without template literal   
+console.log('Without template literal \n multiline string');   
+    
+// With template literal   
+console.log(`Using template literal  
+multiline string`);
 
 
                         /* REST OPERATOR*/
@@ -40,7 +49,7 @@ mSum(1,2,3,4,5,6,7,8)
 
 let a1=[1,2,3,4,5]
 let a2=[6,7,8]
-let a3=[...a2]  //if it's gives as ... then it won't get updated
+let a3=[...a2]  //if it's given as ... then it won't get updated
 a2.push(9)
 console.log(a1+" | "+a2+" | "+a3)
 
@@ -99,7 +108,13 @@ const earr=myaar.map((value,key)=>{
 console.log(myarr)
 console.log(earr)
 
+const naren_Array = myaar.map((val,pos)=>{
+    pos+=1
+    console.log(`Val ${val} Pos ${pos}`)
+    return val
+})
 
+console.log(naren_Array)
 
 /**Reduce */
 
@@ -119,21 +134,35 @@ const result=marr.reduce((accum,val)=>{
     console.log("___")
     
     return (accum+1)+(val.Work)
-},0)
+},10)
 console.log(result)
 
+let NArray = [{
+    Name : "Narendran Elango",
+    Profession : "Software Developer"
+},{
+    Name : "Anush Elango",
+    Profession : "Software Developer"
+}]
+
+const NReduce = NArray.reduce((acum,v)=>{
+    console.log(v)
+    return `${acum} ${v.Name}`
+},0)
+
+console.log(NReduce)
+                                                /** Filter*/
 
 
-/** Filter*/
 
-
-
-const arrays=[1,2,3,4,5]
-const resarr=arrays.filter(item=>{
-    return arrays[item]>3
+const arrays=[1,2,31,14,15]
+const resarr=arrays.filter((item)=>{
+    return arrays[item] > 3 //To find the position of number greater than 3 
 })
 console.log(resarr)
 
+constNresarr = arrays.filter(nos => nos > 3) //To find the number of elements greater than 3
+console.log(constNresarr)
 
 
 /**Find and Find Index */
@@ -141,7 +170,7 @@ console.log(resarr)
 
 
 const r=arrays.findIndex(item=>{
-    return item ===4
+    return item === 14
 })
 console.log(r)
 
@@ -189,6 +218,20 @@ ob.holo()
 
 /**Callback and Promises */
 
+// Callback
+const id=1
+$.get('https://jsonplaceholder.typicode.com/posts',(data)=>{
+    console.log(data);
+    $.get(`https://jsonplaceholder.typicode.com/posts/${id}`,(data)=>{
+        console.log(data)
+    }).fail(err=>{
+        console.log('Error')
+    })
+}).fail(err=>{
+    console.log('Error')
+})
+
+
 const promiseList=new Promise((resolve,reject)=>{
     console.log("SENDING LIST CALL")
     $.get("http://jsonplaceholder.typicode.com/posts",(data)=>{
@@ -207,8 +250,8 @@ const promiseDetails=(data)=>new Promise((resolve,reject)=>{
         })
 })
 
-promiseList
-.then(promiseDetails)
+promiseList//Prioritizing to get promiseList first and then promoseDetails next
+.then(promiseDetails) //Two promise got chained and generating a single Response (or) Error.
 .then((response)=>{
     console.log("Then response =>",response)
 })
@@ -218,14 +261,6 @@ promiseList
 })
 
 
-// const postListPromise=new Promise((resolve,reject)=>{
-//     $.get('https://jsonplaceholder.typicode.com\posts',(data)=>{
-//     console.log(data);
-
-// }).fail(err=>{
-//     reject(new Error('Error'))
-// })
-// })
 
 
 
